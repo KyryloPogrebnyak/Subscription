@@ -3,6 +3,7 @@ from .forms import CreateUserForm
 from django.http import HttpResponse
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login
+from django.shortcuts import redirect
 
 
 def home(request):
@@ -43,11 +44,11 @@ def login_view(request):
 
             if user is not None and user.is_writer == True:
                 login(request, user)
-                return HttpResponse("Welcome, writer!")
+                return redirect("writer-dashboard")
             
             if user is not None and user.is_writer == False:
                 login(request, user)
-                return HttpResponse("Welcome, client!")
+                return redirect("client-dashboard")
     
     context = {"LoginForm": form}
 
