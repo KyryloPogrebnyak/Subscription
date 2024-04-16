@@ -1,3 +1,10 @@
-<h1>Writer dashboard</h1>
+{% extends "writer/navbar.html" %}
 
-<a href="{% url "user_logout" %}"> Logout </a>
+{% load static %}
+
+{% block content %}
+
+    <div class="container shadow-md p-5 form-layout text-center">
+        <h5> 👋 Welcome, {{user.first_name}} to your dashboard! </h5>
+
+{% endblock %}
