@@ -18,6 +18,18 @@
 
             <br><br>
 
+            {% if article.is_premium == True %}
+
+                <strong>⭐Premium</strong>
+
+            {% elif article.is_premium == False %}
+
+                <strong>Free</strong>
+
+            {% endif %}
+
+            <hr>
+
             <a href="{% url 'update-article' article.id %}" class="btn btn-primary">Update</a>
             
             <br>
