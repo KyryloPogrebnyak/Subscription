@@ -1,25 +1,26 @@
 {% load static %}
 
 <html>
-    <head>
 
-        <title> Thoughts </title>
+  <head>
 
-
-        <meta charset="utf-8" />
-
-        <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1"/>
+    <title> Thoughts | Writer </title>
 
 
-        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1"/>
 
 
-        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
 
 
-      </head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+
+  </head>
+
+      <nav class="navbar navbar-expand-lg navbar-white bg-white justify-content-center">
 
         <a class="navbar-brand main-heading"> 
                 
@@ -69,7 +70,7 @@
     
               <li class="nav-item">
     
-                <a class="btn btn-secondary navbar-btn" type="button"  href="{% url '' %}">My articles</a>
+                <a class="btn btn-secondary navbar-btn" type="button"  href="{% url 'my-articles' %}">My articles</a>
     
               </li>
     

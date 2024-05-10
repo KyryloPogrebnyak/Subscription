@@ -4,16 +4,17 @@
 
     <br>
     <div class="container bg-white shadow-md p-5 form-layout">
-        <h3>Create article</h3>
+        <h3>Update article</h3>
 
-        <p>You may create your article below:</p>
+        <p>You may update your article below:</p>
 
         <br>
 
         <form method="POST" autocomplete="off">
             {% csrf_token %}
-            {{ CreateArticleForm|crispy }}
-            <input class="btn btn-success" type="submit" value="Create"/>
+            {{ UpdateArticleForm|crispy }}
+            <input class="btn btn-success" type="submit" value="Update"/>
         </form>
     </div>
+
 {% endblock %}
