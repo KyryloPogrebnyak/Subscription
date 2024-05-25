@@ -1,3 +1,20 @@
-<h1>Client dashboard</h1>
+{% extends 'client/navbar.html' %}
 
-<a href="{% url 'user_logout' %}"> Logout </a>
+{% load static %}
+
+{% block content %}
+
+    <br>
+
+    <div class="container bg-white shadow-md p-5 form-layout text-center">
+        <h5><p class="text-secondary-emphasis">👋 Welcome, {{user.first_name}} to your dashboard!</p></h5>
+    </div>
+
+    <br>
+
+    <div class="container bg-white shadow-md p-5 form-layout text-center">
+        <h5><p class="text-secondary-emphasis">Subscription status: </p></h5>
+        <p>{{SubPlan}}</p>
+    </div>
+
+{% endblock %}
